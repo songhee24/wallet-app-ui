@@ -181,7 +181,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ),
                               const SizedBox(
-                                height: 12,
+                                height: 8,
                               ),
                               Text(
                                 'Payment and Incoming',

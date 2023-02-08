@@ -150,8 +150,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 horizontal: 16,
               ),
               child: Column(
-                children: <Widget>[
-                  CardListTile(),
+                children: const <Widget>[
+                  CardListTile(
+                    imageLink: 'assets/icons/monitoring.png',
+                    tileName: 'Statistics',
+                    tileSubname: 'Payment and Incoming',
+                  ),
                 ],
               ),
             ),

@@ -123,11 +123,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   title: 'send',
                 ),
                 CardButton(
-                  imageLink: 'assets/icons/send-money.png',
+                  imageLink: 'assets/icons/bill.png',
                   title: 'send',
                 ),
                 CardButton(
-                  imageLink: 'assets/icons/send-money.png',
+                  imageLink: 'assets/icons/credit-card.png',
                   title: 'send',
                 ),
               ],

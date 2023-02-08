@@ -61,7 +61,19 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             // Cards
 
-            CreditCard(),
+            Container(
+                margin: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                ),
+                height: 200,
+                child: PageView(
+                  scrollDirection: Axis.horizontal,
+                  children: <Widget>[
+                    CreditCard(),
+                    CreditCard(),
+                    CreditCard(),
+                  ],
+                )),
           ],
         ),
       ),

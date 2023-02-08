@@ -116,21 +116,27 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 40,
             ),
             // buttons
-            Row(
-              children: const <Widget>[
-                CardButton(
-                  imageLink: 'assets/icons/send-money.png',
-                  title: 'send',
-                ),
-                CardButton(
-                  imageLink: 'assets/icons/bill.png',
-                  title: 'send',
-                ),
-                CardButton(
-                  imageLink: 'assets/icons/credit-card.png',
-                  title: 'send',
-                ),
-              ],
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 16,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const <Widget>[
+                  CardButton(
+                    imageLink: 'assets/icons/send-money.png',
+                    title: 'send',
+                  ),
+                  CardButton(
+                    imageLink: 'assets/icons/bill.png',
+                    title: 'send',
+                  ),
+                  CardButton(
+                    imageLink: 'assets/icons/credit-card.png',
+                    title: 'send',
+                  ),
+                ],
+              ),
             ),
           ],
         ),

@@ -17,7 +17,7 @@ class CardButton extends StatelessWidget {
       children: <Widget>[
         // icon
         Container(
-          height: 100,
+          height: 90,
           padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(
             color: Colors.white,

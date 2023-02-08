@@ -68,12 +68,24 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               child: Column(
                 children: <Widget>[
-                  Text('Balance'),
-                  Text('\$5,250,20'),
+                  Text(
+                    'Balance',
+                    style: Theme.of(context).textTheme.headline1,
+                  ),
+                  Text(
+                    '\$5,250,20',
+                    style: Theme.of(context).textTheme.headline1,
+                  ),
                   Row(
-                    children: const <Widget>[
-                      Text('**** 3456'),
-                      Text('10/24'),
+                    children: <Widget>[
+                      Text(
+                        '**** 3456',
+                        style: Theme.of(context).textTheme.headline1,
+                      ),
+                      Text(
+                        '10/24',
+                        style: Theme.of(context).textTheme.headline1,
+                      ),
                     ],
                   )
                 ],

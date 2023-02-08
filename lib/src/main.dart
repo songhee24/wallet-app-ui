@@ -13,7 +13,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          colorSchemeSeed: const Color(0xff6750a4), useMaterial3: true),
+        colorSchemeSeed: const Color(0xff6750a4),
+        useMaterial3: true,
+        textTheme: const TextTheme(
+          headline1: TextStyle(
+            fontWeight: FontWeight.w400,
+            fontSize: 16,
+            color: Colors.white,
+          ),
+        ),
+      ),
       home: HomeScreen(),
     );
   }

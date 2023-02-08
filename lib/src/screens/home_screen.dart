@@ -60,8 +60,11 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             // Cards
             Container(
-              decoration: const BoxDecoration(
-                color: Colors.deepPurple,
+              width: 300,
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: Colors.deepPurple[300],
+                borderRadius: BorderRadius.circular(14),
               ),
               child: Column(
                 children: <Widget>[

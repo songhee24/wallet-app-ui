@@ -170,40 +170,39 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       bottomNavigationBar: BottomAppBar(
         color: Colors.grey[200],
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: <Widget>[
-            IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.home,
-                size: 32,
-                color: Colors.pink[200]!,
+        child: Padding(
+          padding: const EdgeInsets.only(top: 8),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.home,
+                  size: 32,
+                  color: Colors.pink[200]!,
+                ),
               ),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(
-                size: 32,
-                Icons.settings,
-                color: Colors.pink[200]!,
+              IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  size: 32,
+                  Icons.settings,
+                  color: Colors.pink[200]!,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
-      floatingActionButton: Padding(
-        padding: const EdgeInsets.only(
-          top: 35,
-        ),
-        child: FloatingActionButton(
-          backgroundColor: Colors.pinkAccent,
-          shape: const CircleBorder(),
-          onPressed: () {},
-          child: const Icon(
-            Icons.wallet_sharp,
-            color: Colors.white,
-          ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.pinkAccent,
+        shape: const CircleBorder(),
+        onPressed: () {},
+        child: const Icon(
+          Icons.wallet_sharp,
+          color: Colors.white,
+          size: 32,
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

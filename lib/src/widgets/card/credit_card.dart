@@ -2,10 +2,15 @@ import 'package:flutter/material.dart';
 
 ///  Created by mac on 8/2/23.
 class CreditCard extends StatelessWidget {
+  final double symmetricMargin;
+
+  const CreditCard({super.key, this.symmetricMargin = 0});
+
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 300,
+      margin: EdgeInsets.symmetric(horizontal: symmetricMargin),
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         color: Colors.deepPurple[300],

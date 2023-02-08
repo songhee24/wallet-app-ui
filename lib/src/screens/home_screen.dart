@@ -65,15 +65,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: 200,
                 child: PageView(
                   scrollDirection: Axis.horizontal,
-                  children: const <Widget>[
+                  children: <Widget>[
                     CreditCard(
                       symmetricMargin: 16,
-                    ),
-                    CreditCard(
-                      symmetricMargin: 16,
-                    ),
-                    CreditCard(
-                      symmetricMargin: 16,
+                      balance: 512.20,
+                      cardNumber: 3242342342,
+                      expiryMonth: 10,
+                      expiryYear: 24,
+                      color: Colors.deepPurple[300]!,
                     ),
                   ],
                 )),

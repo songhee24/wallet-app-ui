@@ -3,8 +3,20 @@ import 'package:flutter/material.dart';
 ///  Created by mac on 8/2/23.
 class CreditCard extends StatelessWidget {
   final double symmetricMargin;
+  final double balance;
+  final int cardNumber;
+  final int expiryMonth;
+  final int expiryYear;
+  final Color color;
 
-  const CreditCard({super.key, this.symmetricMargin = 0});
+  const CreditCard(
+      {super.key,
+      this.symmetricMargin = 0,
+      required this.balance,
+      required this.cardNumber,
+      required this.expiryMonth,
+      required this.expiryYear,
+      required this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +25,7 @@ class CreditCard extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: symmetricMargin),
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: Colors.deepPurple[300],
+        color: color,
         borderRadius: BorderRadius.circular(14),
       ),
       child: Column(
@@ -24,7 +36,7 @@ class CreditCard extends StatelessWidget {
             height: 15,
           ),
           Text(
-            '\$5,250,20',
+            '\$ $balance',
             style: Theme.of(context).textTheme.headline1?.merge(
                   const TextStyle(
                     fontSize: 22,
@@ -38,11 +50,11 @@ class CreditCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text(
-                '**** 3456',
+                '$cardNumber',
                 style: Theme.of(context).textTheme.headline1,
               ),
               Text(
-                '10/24',
+                '$expiryMonth/$expiryYear',
                 style: Theme.of(context).textTheme.headline1,
               ),
             ],

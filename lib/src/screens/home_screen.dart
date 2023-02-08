@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:wallet_app_ui/src/widgets/card/credit_card.dart';
 
 ///  Created by mac on 8/2/23.
@@ -8,6 +9,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final _controller = PageController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,36 +65,51 @@ class _HomeScreenState extends State<HomeScreen> {
             // Cards
 
             Container(
-                height: 200,
-                child: PageView(
-                  scrollDirection: Axis.horizontal,
-                  children: const <Widget>[
-                    CreditCard(
-                      symmetricMargin: 16,
-                      balance: 512.20,
-                      cardNumber: 3242342342,
-                      expiryMonth: 10,
-                      expiryYear: 24,
-                      cardType: 'Visa',
-                    ),
-                    CreditCard(
-                      symmetricMargin: 16,
-                      balance: 212.20,
-                      cardNumber: 650632094,
-                      expiryMonth: 04,
-                      expiryYear: 25,
-                      cardType: 'MasterCard',
-                    ),
-                    CreditCard(
-                      symmetricMargin: 16,
-                      balance: 152.20,
-                      cardNumber: 5454657,
-                      expiryMonth: 12,
-                      expiryYear: 25,
-                      cardType: 'UnionPay',
-                    ),
-                  ],
-                )),
+              height: 200,
+              child: PageView(
+                scrollDirection: Axis.horizontal,
+                controller: _controller,
+                children: const <Widget>[
+                  CreditCard(
+                    symmetricMargin: 16,
+                    balance: 512.20,
+                    cardNumber: 3242342342,
+                    expiryMonth: 10,
+                    expiryYear: 24,
+                    cardType: 'Visa',
+                  ),
+                  CreditCard(
+                    symmetricMargin: 16,
+                    balance: 212.20,
+                    cardNumber: 650632094,
+                    expiryMonth: 04,
+                    expiryYear: 25,
+                    cardType: 'MasterCard',
+                  ),
+                  CreditCard(
+                    symmetricMargin: 16,
+                    balance: 152.20,
+                    cardNumber: 5454657,
+                    expiryMonth: 12,
+                    expiryYear: 25,
+                    cardType: 'UnionPay',
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 12,
+            ),
+            SmoothPageIndicator(
+              controller: _controller,
+              count: 3,
+              effect: ExpandingDotsEffect(
+                spacing: 5,
+                dotHeight: 8,
+                dotWidth: 8,
+                activeDotColor: Colors.grey[800]!,
+              ),
+            ),
           ],
         ),
       ),

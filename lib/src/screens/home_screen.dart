@@ -18,11 +18,26 @@ class _HomeScreenState extends State<HomeScreen> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
               child: Row(
-                children: const <Widget>[
-                  Text(
-                    'My Cards',
-                    style: TextStyle(fontSize: 26),
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Row(
+                    children: const <Widget>[
+                      Text(
+                        'My',
+                        style: TextStyle(
+                          fontSize: 26,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(
+                        ' Cards',
+                        style: TextStyle(fontSize: 26),
+                      ),
+                    ],
                   ),
+
+                  // Pluss Button
+                  Icon(Icons.add),
                 ],
               ),
             )

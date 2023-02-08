@@ -155,6 +155,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     imageLink: 'assets/icons/monitoring.png',
                     tileName: 'Statistics',
                     tileSubname: 'Payment and Incoming',
+                    marginBottom: 12,
+                  ),
+                  CardListTile(
+                    imageLink: 'assets/icons/payment.png',
+                    tileName: 'Transactions',
+                    tileSubname: 'Transaction History',
                   ),
                 ],
               ),

@@ -38,12 +38,16 @@ class _HomeScreenState extends State<HomeScreen> {
 
                   // Pluss Button
                   IconButton(
-                    splashRadius: 20,
-                    padding: EdgeInsets.zero,
                     icon: const Icon(Icons.add),
+                    padding: const EdgeInsets.all(4),
+                    constraints: const BoxConstraints(
+                      maxHeight: 40,
+                      maxWidth: 40,
+                    ),
                     style: IconButton.styleFrom(
                       backgroundColor: Colors.grey[400],
-                      highlightColor: Colors.deepPurple.withOpacity(0.12),
+                      highlightColor:
+                          Colors.deepPurpleAccent[100]?.withOpacity(0.12),
                     ),
                     onPressed: () {},
                   ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:wallet_app_ui/src/widgets/card/card_button.dart';
 import 'package:wallet_app_ui/src/widgets/card/credit_card.dart';
 
 ///  Created by mac on 8/2/23.
@@ -116,42 +117,10 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             // buttons
             Row(
-              children: <Widget>[
-                Column(
-                  children: <Widget>[
-                    // icon
-                    Container(
-                      height: 100,
-                      padding: const EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(20),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.shade600,
-                            blurRadius: 100,
-                            spreadRadius: 1,
-                          ),
-                        ],
-                      ),
-                      child: FittedBox(
-                        fit: BoxFit.fill,
-                        child: Image.asset('assets/icons/send-money.png'),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 12,
-                    ),
-                    // text
-                    Text(
-                      'send',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18,
-                        color: Colors.grey[700]!,
-                      ),
-                    ),
-                  ],
+              children: const <Widget>[
+                CardButton(
+                  imageLink: 'assets/icons/send-money.png',
+                  title: 'send',
                 ),
               ],
             ),

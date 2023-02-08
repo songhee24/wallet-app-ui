@@ -30,9 +30,9 @@ class CardButton extends StatelessWidget {
               ),
             ],
           ),
-          child: FittedBox(
+          child: Image(
+            image: AssetImage(imageLink),
             fit: BoxFit.fill,
-            child: Image.asset(imageLink),
           ),
         ),
         const SizedBox(

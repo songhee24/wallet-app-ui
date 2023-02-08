@@ -122,6 +122,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   imageLink: 'assets/icons/send-money.png',
                   title: 'send',
                 ),
+                CardButton(
+                  imageLink: 'assets/icons/send-money.png',
+                  title: 'send',
+                ),
+                CardButton(
+                  imageLink: 'assets/icons/send-money.png',
+                  title: 'send',
+                ),
               ],
             ),
           ],

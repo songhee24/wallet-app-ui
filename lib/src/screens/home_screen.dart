@@ -65,14 +65,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: 200,
                 child: PageView(
                   scrollDirection: Axis.horizontal,
-                  children: <Widget>[
+                  children: const <Widget>[
                     CreditCard(
                       symmetricMargin: 16,
                       balance: 512.20,
                       cardNumber: 3242342342,
                       expiryMonth: 10,
                       expiryYear: 24,
-                      color: Colors.deepPurple[300]!,
+                      cardType: 'Visa',
                     ),
                     CreditCard(
                       symmetricMargin: 16,
@@ -80,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       cardNumber: 650632094,
                       expiryMonth: 04,
                       expiryYear: 25,
-                      color: Colors.blue[300]!,
+                      cardType: 'MasterCard',
                     ),
                     CreditCard(
                       symmetricMargin: 16,
@@ -88,7 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       cardNumber: 5454657,
                       expiryMonth: 12,
                       expiryYear: 25,
-                      color: Colors.lightGreen[300]!,
+                      cardType: 'UnionPay',
                     ),
                   ],
                 )),

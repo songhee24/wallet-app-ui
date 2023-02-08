@@ -111,6 +111,9 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
 
+            const SizedBox(
+              height: 40,
+            ),
             // buttons
             Row(
               children: <Widget>[
@@ -123,6 +126,13 @@ class _HomeScreenState extends State<HomeScreen> {
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(20),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.shade600,
+                            blurRadius: 100,
+                            spreadRadius: 1,
+                          ),
+                        ],
                       ),
                       child: FittedBox(
                         fit: BoxFit.fill,

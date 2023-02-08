@@ -151,23 +151,47 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 children: <Widget>[
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        height: 80,
-                        padding: const EdgeInsets.all(12),
-                        decoration: BoxDecoration(
-                          color: Colors.grey[100],
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: const Image(
-                          image: AssetImage('assets/icons/monitoring.png'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      Column(
-                        children: const <Widget>[
-                          Text('Statistics'),
-                          Text('Payment and Incoming'),
+                      Row(
+                        children: <Widget>[
+                          Container(
+                            height: 80,
+                            padding: const EdgeInsets.all(12),
+                            decoration: BoxDecoration(
+                              color: Colors.grey[100],
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: const Image(
+                              image: AssetImage('assets/icons/monitoring.png'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 12,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              const Text(
+                                'Statistics',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 12,
+                              ),
+                              Text(
+                                'Payment and Incoming',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.grey[600]!,
+                                ),
+                              ),
+                            ],
+                          ),
                         ],
                       ),
                       const Icon(Icons.arrow_forward_ios),

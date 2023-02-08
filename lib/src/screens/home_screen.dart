@@ -113,7 +113,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
 
             const SizedBox(
-              height: 40,
+              height: 25,
             ),
             // buttons
             Padding(
@@ -137,6 +137,31 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
+            ),
+
+            const SizedBox(
+              height: 25,
+            ),
+
+            // Transactions
+            Column(
+              children: <Widget>[
+                Row(
+                  children: [
+                    Container(
+                      height: 80,
+                      child: Image.asset('assets/icons/monitoring.png'),
+                    ),
+                    Column(
+                      children: const <Widget>[
+                        Text('Statistics'),
+                        Text('Payment and Incoming'),
+                      ],
+                    ),
+                    const Icon(Icons.arrow_forward_ios),
+                  ],
+                ),
+              ],
             ),
           ],
         ),

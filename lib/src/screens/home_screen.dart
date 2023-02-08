@@ -20,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: <Widget>[
             // app bar
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25),
+              padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
@@ -114,16 +114,34 @@ class _HomeScreenState extends State<HomeScreen> {
             // buttons
             Row(
               children: <Widget>[
-                Container(
-                  height: 100,
-                  padding: const EdgeInsets.all(20),
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                  ),
-                  child: FittedBox(
-                    fit: BoxFit.fill,
-                    child: Image.asset('assets/icons/send-money.png'),
-                  ),
+                Column(
+                  children: <Widget>[
+                    // icon
+                    Container(
+                      height: 100,
+                      padding: const EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: FittedBox(
+                        fit: BoxFit.fill,
+                        child: Image.asset('assets/icons/send-money.png'),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 12,
+                    ),
+                    // text
+                    Text(
+                      'send',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                        color: Colors.grey[700]!,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

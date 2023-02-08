@@ -115,7 +115,13 @@ class _HomeScreenState extends State<HomeScreen> {
             Row(
               children: <Widget>[
                 Container(
-                  child: Center(
+                  height: 100,
+                  padding: const EdgeInsets.all(20),
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                  ),
+                  child: FittedBox(
+                    fit: BoxFit.fill,
                     child: Image.asset('assets/icons/send-money.png'),
                   ),
                 ),

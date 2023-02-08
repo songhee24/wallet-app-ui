@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
 
-                  // Pluss Button
+                  // Plus Button
                   IconButton(
                     icon: const Icon(Icons.add),
                     padding: const EdgeInsets.all(4),
@@ -51,6 +51,28 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     onPressed: () {},
                   ),
+                ],
+              ),
+            ),
+
+            const SizedBox(
+              height: 25,
+            ),
+            // Cards
+            Container(
+              decoration: const BoxDecoration(
+                color: Colors.deepPurple,
+              ),
+              child: Column(
+                children: <Widget>[
+                  Text('Balance'),
+                  Text('\$5,250,20'),
+                  Row(
+                    children: const <Widget>[
+                      Text('**** 3456'),
+                      Text('10/24'),
+                    ],
+                  )
                 ],
               ),
             )

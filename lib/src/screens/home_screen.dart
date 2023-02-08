@@ -129,11 +129,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   CardButton(
                     imageLink: 'assets/icons/bill.png',
-                    title: 'send',
+                    title: 'bills',
                   ),
                   CardButton(
                     imageLink: 'assets/icons/credit-card.png',
-                    title: 'send',
+                    title: 'pay',
                   ),
                 ],
               ),
@@ -144,24 +144,37 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
 
             // Transactions
-            Column(
-              children: <Widget>[
-                Row(
-                  children: [
-                    Container(
-                      height: 80,
-                      child: Image.asset('assets/icons/monitoring.png'),
-                    ),
-                    Column(
-                      children: const <Widget>[
-                        Text('Statistics'),
-                        Text('Payment and Incoming'),
-                      ],
-                    ),
-                    const Icon(Icons.arrow_forward_ios),
-                  ],
-                ),
-              ],
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 16,
+              ),
+              child: Column(
+                children: <Widget>[
+                  Row(
+                    children: [
+                      Container(
+                        height: 80,
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: Colors.grey[100],
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: const Image(
+                          image: AssetImage('assets/icons/monitoring.png'),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      Column(
+                        children: const <Widget>[
+                          Text('Statistics'),
+                          Text('Payment and Incoming'),
+                        ],
+                      ),
+                      const Icon(Icons.arrow_forward_ios),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ],
         ),

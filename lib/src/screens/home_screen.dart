@@ -170,7 +170,13 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       bottomNavigationBar: BottomAppBar(),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.pinkAccent,
+        shape: const CircleBorder(),
         onPressed: () {},
+        child: const Icon(
+          Icons.wallet_sharp,
+          color: Colors.white,
+        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );

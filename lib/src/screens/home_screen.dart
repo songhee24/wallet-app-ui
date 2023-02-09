@@ -100,7 +100,6 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(
               height: 12,
             ),
-
             SmoothPageIndicator(
               controller: _controller,
               count: 3,
@@ -110,6 +109,17 @@ class _HomeScreenState extends State<HomeScreen> {
                 dotWidth: 8,
                 activeDotColor: Colors.grey[800]!,
               ),
+            ),
+
+            // buttons
+            Row(
+              children: <Widget>[
+                Container(
+                  child: Center(
+                    child: Image.asset('assets/icons/send-money.png'),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
